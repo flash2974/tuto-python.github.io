@@ -1,0 +1,153 @@
+#header{
+    height: 80px;
+    box-shadow: 0px 8px 8px rgba(3, 3, 124, 0.2);
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.logo a {
+    text-decoration: none;
+    color:rgb(3, 3, 124);
+    padding: 10px;
+    transition: .4s ease-in-out;
+}
+
+.logo a:hover {
+    color: rgb(255, 2, 103);
+    text-decoration: none;
+    transition: .4s ease-in-out;
+}
+
+.liens {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10%; 
+}
+
+.btn.btn-primary {
+    background-color:rgb(3, 3, 124);
+    border-color: rgb(3,3,124);
+    color: white;
+    transition: .4s ease-in-out ;
+}
+
+.btn.btn-primary:hover {
+    background-color: white ;
+    color:rgb(3, 3, 124);
+    transition: .4s ease-in-out ;
+    
+}
+
+.btn.btn-secondary {
+    background-color:rgb(111, 0, 255);
+    border-color: rgb(111, 0, 255);
+    color: white;
+    transition: .4s ease-in-out ;
+}
+
+.btn.btn-secondary:hover {
+    background-color: white ;
+    /* color: currentColor; */
+    transition: .4s ease-in-out ;
+}
+
+th, td {
+    padding-top: 10px;
+    padding-right: 10px;
+    /* border: 1px solid black; */
+}
+
+footer {
+    text-align: center;
+}
+
+table img {
+    width:650px;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 170px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+  
+/* Style de base pour les liens */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181; /* Couleur initiale du texte */
+    display: block;
+    position: relative;
+    background: linear-gradient(to right, rgb(255, 255, 255) 50%, #818181 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+    text-decoration: none;
+    background-position: left bottom;
+}
+
+#main {
+    margin-right: 170px; /* Same as the width of the sidebar */
+    padding: 10px 0px;
+    margin-left: 20px;
+}
+
+.div_doc {
+    margin-top: 20px;
+    text-align: justify;
+    margin-right:190px;
+}
+
+#refs {
+    font-weight: 700;
+}
+.com-python code {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #5033f3;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    overflow: auto;
+    padding: 1em 1.5em;
+    
+}
+
+.language-python {
+    max-width:fit-content;
+    
+}
+
+.com-python {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+

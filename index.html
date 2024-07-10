@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tuto Python - docs</title>
+    <link rel="stylesheet" href="CSS/accueil.css">
+    <script src="JS/essai.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<header>
+    <div id="header">
+        <div class="logo">
+            <a href="./index.html">
+                Tuto Python
+            </a>
+        </div>
+        
+        <div class="liens">
+            <a href="./index.html">
+                <button class="btn btn-primary">Documentation</button>
+            </a>
+
+            <a href="./exercices.html">
+                <button class="btn btn-primary">Exercices</button>
+            </a>
+
+        </div>
+    </div>
+    
+</header>
+<body>
+    <div class="sidenav">
+        <a href="#base">Les basiques</a>
+        <a href="#types">Types primaires</a>
+        <a href="#operations">Les opérations</a>
+        <a href="#comparateurs">Les comparateurs</a>
+        <a href="#variables">Les variables</a>
+        <a href="#fonctions">Les fonctions</a>
+    </div>
+
+    <div id="main">
+
+    <div id="base" class="div_doc">
+        <h2>Les basiques</h2>
+        Pour faire tourner du code Python, deux manières possibles. On peut exécuter du code directement dans la console 
+        (le logiciel appelé Python), mais ce n'est pas pratique pour exécuter des longues séquences de code, des fonctions, etc.
+        La console est utile pour faire quelques calculs simples et des tests.<br>
+        La deuxième manière est avec un IDE, c'est-à-dire un logiciel dans lequel on pourra taper du code et le sauvegarder, avoir
+        la coloration syntaxique et faire tourner du code. J'utilise personnellement <a href='https://code.visualstudio.com/'>Visual Studio Code</a> (appelé aussi VSCode),
+        mais d'autres éditeurs Python existent, comme <a href='https://pyzo.org/'>Pyzo</a> ou <a href='https://www.spyder-ide.org/'>Spyder</a>.
+        <br>
+        <table style="text-align:center;">
+            <tr>
+                <th><img src="FILES/pythonApp.png"></th>
+                <th><img src="FILES/vsApp.png"></th>
+            </tr>
+
+            <tr>
+                <td><img src='FILES/pythonConsole.png'></td>
+                <td><img src='FILES/VScode.png'></td>
+            </tr>
+
+            <tr>
+                <td>Console Python</td>
+                <td>IDE (VSCode ici)</td>
+            </tr>
+        </table>
+        
+       
+    </div>
+
+    <div id="types" class="div_doc">
+        <h2>Les types en Python</h2>
+        Pour vraiment commencer, je trouve intéressant de définir les "types" dans Python. Ce sont des éléments essentiels.
+        En Python, toute variable est d'un type. Cela peut-être un nombre, une chaine de caractères, ou bien une 
+        valeur binaire (appelée booléen). En général, le type est en anglais, et on utilisera toujours le nom donné
+        par Python, même si on expliquera avec nos propres mots.
+        Voyons cela de suite.
+        <br><br>
+
+        <strong>Les chaines de caractères (str)</strong><br>
+        Une chaine de caractères contient en général du texte.
+        Elle est toujours entre guillemets, qui peuvent être <a id='refs' title="'">simples</a>,
+        ou <a id='refs' title='"'>doubles</a><br>
+
+        Leur type est str. C'est-à-dire que si on définit une variable et que la valeur de cette variable est 'Jean-René',
+        Python va l'identifier comme chaine de caractères, c'est-à-dire str.<br>
+        Si Python vous renvoie str comme type, il aura compris qu'il traite une chaine de caractères.
+
+        <div class="com-python">
+            <code>
+                Exemples :<br>
+                'Jean-René' -> entre guillemets => type <strong>str</strong><br>
+                "Jean-René" -> entre guillemets => type <strong>str</strong><br>
+                1 -> pas de guillemets pas de type <strong>str</strong><br>
+                "18" -> entre guillemets => type <strong>str</strong>
+            </code>
+        </div>
+
+        <strong>Les entiers (int)</strong><br>
+        Un entier (int) représente un entier relatif, donc un nombre sans virgule. Il peut être négatif comme positif.
+        Python l'identifiera comme int.
+        <div class="com-python">
+            <code>
+                Exemples :<br>
+                1 -> nombre entier => type <strong>int</strong><br>
+                -2687 -> nombre entier => type <strong>int</strong><br>
+                1.82 -> nombre à virgule donc pas de type int
+            </code>
+        </div>
+
+        <strong>Les nombres à virgule (float)</strong><br>
+        Ici, un nombre sera de type float à partir du moment où il a une virgule
+        <div class="com-python">
+            <code>
+                Exemples :<br>
+                1.0 -> nombre à virugle => type <strong>float</strong><br>
+                -18.55 -> nombre à virugle => type <strong>float</strong><br>
+                0 -> pas de virgule => type <strong>int</strong>
+            </code>
+        </div>
+
+        <strong>Les booléens (bool)</strong><br>
+        Une valeur booléeene est une valeur binaire. Elle peut prendre uniquement deux valeur : vrai et faux.
+        En Python, ces valeurs seront repsectivement True et False.
+        On peut définir directement une variable à True ou False, ou bien avec une opération.
+        Pour le moment, restons dans la simplicité.
+        <div class="com-python">
+            <code>
+                Exemples :<br>
+                False -> valeur booléenne => type <strong>bool</strong><br>
+                True -> valeur booléenne => type <strong>bool</strong><br>
+            </code>
+        </div>
+    </div>
+
+    <div id="operations" class="div_doc">
+        <h2>Les opérateurs</h2>
+        Maintenant que nous avons vu les types de base, on va pouvoir les manipuler. Notamment les nombres (int et float)
+        afin de faire des calculs. On peut faire des calculs directement dans la console (pour cela il faut
+        lancer l'application Python sur votre PC).<br>
+        Dans la console, on peut donc faire des calculs simples :
+        <div class="language-python">
+            <pre><code>>>> 1 + 2 # Entrée clavier tapée par l'humain (xD)<br>
+3 # Réponse de Python
+>>> 2*4
+8</code></pre></div>
+        Ici, le # représente un commentaire, c'est-à-dire que tout le texte suivi du # ne sera pas exécuté par Python.
+        Pour ce qui est du code ci-dessus, Python fonctionne comme une calculatrice. À savoir qu'on peut laisser des 
+        espaces entre les opérateurs(+, -, etc) ou les coller aux nombres. Je préfère les espaces, c'est plus clair.<br>
+        Les opérateurs que nous allons pouvoir utiliser sont les suivants :
+        <ul>
+            <li>+ (plus)</li>
+            <li>- (moins)</li>
+            <li>* (multiplication)</li>
+            <li>/ (division)</li>
+            <li>** (puissance)</li>
+        </ul>
+        Voyons quelques exemples.
+
+        <div class="language-python">
+            <pre><code>>>> 10**2 # 10²
+100
+>>> 10.2 + 10.2 # L'addition fonctionne aussi avec des float
+20.4 
+>>> 8*4 # 8x4
+32
+>>> 4**4 # 4^4
+256
+>>> 'Hello' + ', ' + 'World'  # On peut aussi additioner des str : on appelle ça concaténer
+'Hello, World'
+>>> "Yeah"*3 # Multiplier par n revient à faire n additions, donc le produit fonctionne aussi sur les str.
+'YeahYeahYeah'
+</code></pre></div>
+
+    </div>
+
+    <div id="comparateurs" class="div_doc">
+        <h2>Les comparateurs</h2>
+        On va pouvoir comparer des objets (types) entre eux à l'aide de comparateurs<br>
+        Parmi les comparateurs, on retrouve :
+        <ul>
+            <li>== (égal à)</li>
+            <li>!= (différent de)</li>
+            <li>&gt; (plus grand que)</li>
+            <li>&lt; (plus petit que)</li>
+            <li>&gt;= (plus grand ou égal à)</li>
+            <li>&lt;= (plus petit ou égal à)</li>
+        </ul>
+        On va pouvoir comparer plusieurs types entre eux, et le résultat de cette comparaison sera un booléen :
+        soit la comparaison est vraie (True), soit elle est fausse (False).
+        <div class="language-python">
+            <pre><code>>>> 10 != 8 # 10 est différent de 8 -> c'est vrai !
+True
+>>> 5*4 == 10*2 # 5*4 est égal à 10*2 -> c'est vrai car les deux sont égaux à 20
+True
+>>> 10 > 18 # 10>18 -> c'est faux !
+False
+>>> 10 > 10 # 10 > 10 est faux car c'est un supérieur strict
+False
+>>> 10 >= 10 # Par contre, supérieur ou égal sera vrai
+True
+>>> 'value' == 'Value' # La comparaison entre str fonctionne également
+False
+>>> 'value' != 'Value'
+True</code></pre></div>    
+    </div>
+
+    <div id="variables" class="div_doc">
+        <h2>Les variables</h2>
+        Maintenant que nous avons vu les différents types que peuvent prendre les variables, voyons les variables !<br>
+        Imaginez-les comme des boites dans lesquelles on met des données. Si cette donnée est un nombre entier, alors la variable
+        sera de type <strong>int</strong>, etc...<br>
+        Pour assigner une valeur à une variable, on procède de la manière suivante : <br>
+        [nom_variable] = [valeur]<br>
+        À savoir que l'assignation d'une variable ne renvoie rien dans la console.
+
+        <div class="language-python">
+            <pre><code># Exemples :
+>>> a = 5 # a est de type <strong>int</strong>
+>>> texte = 'Hello World' # type <strong>str</strong>
+>>> b = False # etc...</code></pre>
+        </div>
+        
+        On va pouvoir comparer des variables à des nombres, des str, etc...
+        <div class="language-python">
+            <pre><code>>>> a = 5
+>>> a > 4
+True
+>>> user = 'nathan' # Simple = -> on assigne une valeur
+>>> user == 'olivier' # Double == -> on compare deux valeurs
+False</code></pre></div>
+    
+    Comme nous l'avons dit précédemment, le type de la variable sera automatiquement deviné par Python.
+    On peut cependant préciser (pour nous-même, afin d'être sûr du type de telle ou telle variable) quel 
+    est le type d'une certaine variable. Nous avons aussi la méthode <strong>type()</strong> qui vérifie le type
+    d'une variables. Voyons ceci.
+    <div class="language-python">
+        <pre><code>>>> a : int = 5 # On précise que a est de type int
+>>> type(a)
+&lt;class 'int'&gt; # Python a bel et bien reconnu un int. Cependant :
+>>> b : bool = 'Hello'
+>>> type(b)
+&lt;class 'str'&gt;
+</code></pre></div>
+
+    Python s'en moque qu'on précise ou non le type de la variable. Dans tous les cas il se fera son propre avis.
+    C'est nonobstant utile pour les humains, car parfois on se perd et on ne sait plus quel est le type d'une variable...<br>
+    Pour parler de la méthode <strong>type()</strong>, elle nous dit class 'int', 'str', 'bool', etc. On le verra plus tard, mais
+    une classe est un type (petit spoil heheh)
+    </div>
+
+    <div class="div_doc" id="fonctions">
+        <h2>Les fonctions</h2>
+        Les fonctions sont très utiles avec Python ! On préfère toujours mettre du code dans une fonction et ensuite
+        appeler cette fonction, plutôt que mettre du code "en vrac". Et en plus les fonctions permettent d'éxécuter pas mal
+        de code juste en l'appelant.<br>
+        Pour définir une fonction, on utilise la syntaxe suivante :
+        <div class="com-python">
+            <code>
+                def [nom_fonction]([arguments]) :<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;...
+                &nbsp;&nbsp;&nbsp;&nbsp; return result
+            </code>
+        </div>
+
+        Le nom de la fonction doit être simple à appeler, et avoir du sens (une fonction appelée "a" n'a aucun sens). Le nom doit aussi
+        ne pas être déja utilisé par Python (comme class, yield, return, etc...).<br>
+        Concerant les arguments, il peut n'y en avoir aucun, comme un grand nombre. On va les représenter avec des variables. Ces arguments
+        sont séparés par des virgules.<br>
+        Certaines fonctions renvoient des résultats, dans ce cas il faudra retourner ce résultat avec <strong>return</strong><br>
+        Voici une petite fonction qui fait une addition entre deux variables. 
+
+        <div class="language-python">
+            <pre><code>def addition(nombre1, nombre2) : 
+    somme = nombre1 + nombre2
+    return somme</code></pre></div>
+
+        Si j'écris cette fonction dans mon IDE et que je fais run le programme Python, il ne se passera rien. Certes, la fonction est
+        définie, mais on ne l'a pas appelée, donc elle ne s'est pas exécutée. On va donc l'appeler de cette manière :
+
+        <div class="language-python">
+            <pre><code>a = 1
+resultat_addition = addition(a, 5)</code></pre></div>
+        
+        Les arguments peuvent être des variables ou directement des valeurs. Dans notre cas, nombre1 va prendre la valeur de <strong>a</strong> (donc 1)
+        et nombre2 va prendre la valeur de 5. On garde l'ordre des arguments lorsqu'on a écrit la fonction.<br>
+        Dans notre fonction, la dernière ligne est "return somme". La variable "somme" sera donc retournée après avoir exécuté la fonction,
+        et ici on récupère cette valeur dans la variable resultat_addition. Donc cette variable prendra la valeur 6 (1+5).<br>
+        Pour en être sûr, on va l'afficher dans le terminal. On utilise <strong>print(resultat_addition)</strong>.<br>
+        Le résultat arrivera dans notre terminal (ou console, selon IDE). Dans mon cas, j'aurai 6.<br><br>
+        D'ailleurs, du code est considéré "à l'intérieur d'une fonction" avec ses tabulations. En effet, après le "def ...():", on marque
+        une tabulation pour signaler que le code sera à l'intérieur de ladite fonction. Ici, après le 'return somme',
+        nous sommes hors de la fonction.<br>
+        <img src="FILES/fct1.png" width="400px"><br>
+        Mais alors, quelle différence entre return et print ??<br>
+        -> print() affiche seulement des valeurs de variable, et l'affiche dans le terminal.<br>
+        -> return retourne la/les variable(s) mais ne l'affiche pas.<br>
+        Modifions notre fonction :
+        <div class="language-python">
+            <pre><code>def addition(nombre1, nombre2) : 
+    somme = nombre1 + nombre2
+    print(somme)
+a = 1
+resultat_addition = addition(a, 5)
+print(resultat_addition) # None </code></pre></div>
+    
+    
+    Dans notre cas, on va voir affiché 'None' dans la console. ??? c'est quoi ??<br>
+    Déjà, <strong>None</strong> représente une valeur qui n'existe pas. C'est un peu comme un fond d'écran transparent. La variable existe
+    bel et bien, cependant elle n'a pas de valeur.<br>
+    Mais pourquoi le résultat de l'addition n'existe pas ? Eh bien, c'est logique. Parce que la fonction ne comporte pas de return,
+    la variable <strong>resultat_addition</strong> sera assignée à...None. Comme je l'ai dit, print() affiche simplement, et ne renvoie pas de valeur.<br><br>
+
+    Pour une fonction, on va pouvoir préciser ce qu'elle renverra. Grosso modo, si la fonction a un return, le type de valeur
+    qui sera retourné est le type de la valeur du return. Si la fonction n'a que des print, elle retourne None.<br>
+    Encore une fois, Python ignore complètement ces infos supplémentaires, c'est juste pour nous, les humains.<br>
+    Comparons nos deux fonctions :
+    <div class="language-python">
+        <pre><code>def addition1(nombre1 : int, nombre2 : int) -> int : # La fonction prend nombre1 (int) et nombre2 (int) et renvoie somme (int)
+    somme = nombre1 + nombre2
+    return somme
+
+def addition2(nombre1 : int, nombre2 : int) -> None : # La fonction prend nombre1 (int) et nombre2 (int) et renvoie None (car elle n'a pas de return)
+    somme = nombre1 + nombre2
+    print(somme)
+
+a = 1
+
+resultat_addition1 = addition1(a, 5)
+resultat_addition2 = addition2(a, 5)
+
+print(resultat_addition1) # 6
+print(resultat_addition2) # None</code></pre></div>
+    
+    Essayez vous-même !
+    
+    <br><br>
+    <strong>Jouons un peu avec une autre fonctions.</strong><br>Vous vous souvenez de la concaténation de caractères ?
+    <div class="language-python">
+        <pre><code>def ajouter_bonjour(phrase : str) -> str # Prend une phrase (str) en argument et renvoie une str 
+    phrase = 'Bonjour' + phrase
+    return phrase
+
+phrase_de_base = "j'aime les voitures !"
+phrase_avec_bjr = ajouter_bonjour(phrase_de_base)
+print(phrase_avec_bjr) # Bonjourj'aime les voitures</code></pre></div>
+
+    Il s'est passé plein de choses !<br>
+    Ligne 2, on va changer la valeur de <strong>phrase</strong> par "Bonjour" + <strong>phrase.</strong><br>
+    C'est-à-dire qu'on prend la valeur "originelle" de <strong>phrase</strong> pour ajouter "Bonjour" dedans.
+    Le résultat de cette addition sera directement contenu dans la variable "phrase", qui sera donc modifiée.<br>
+    Ensuite, la concaténation "colle" deux chaines de caractères, donc étant donné que 'Bonjour' n'a pas d'espace, 
+    eh bien ça le colle avec <strong>phrase</strong>
+
+
+    </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+<footer>© 2024 Flash Industries</footer>

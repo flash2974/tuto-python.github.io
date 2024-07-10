@@ -1,0 +1,10 @@
+#mail, #tel, #linkedin {
+    text-decoration: none;
+    color: rgb(55, 11, 234);
+    font-size: 20px; /* Augmente la taille de la police */
+    font-family: 'Roboto', sans-serif; /* Change la police */
+}
+
+#mail:hover, #tel:hover, #linkedin:hover {
+    color: black;
+}
